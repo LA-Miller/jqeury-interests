@@ -3,16 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Movie API</title>
+    <title>Random Movie Generator</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="app.js"></script>
     <script src="movie_api.js"></script>
+    <script src="app.js"></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #111827;
+            color: #e5e7eb;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px 10px;
+            background-color: #1f2937;
+        }
+
+        header h1 {
+            margin: 0 0 5px;
+        }
+
+        .controls {
+            text-align: center;
+            margin: 15px 0;
+        }
+
+        .wrapper {
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+            min-height: 200px;
+        }
+
+        .box {
+            width: 260px;
+            background-color: #1f2937;
+            border-radius: 10px;
+            border: 2px solid #374151;
+            text-align: center;
+            padding: 12px;
+            box-sizing: border-box;
+        }
+
+        .movie_pic {
+            width: 140px;
+            height: 140px;
+        }
+
+        .movieInfo {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        p.hint {
+            text-align: center;
+            color: #9ca3af;
+            margin-bottom: 20px;
+        }
+    </style>
 </head>
 <body>
-    <h1>Learn about your favorite movies!</h1>
-    <p>Click for director and category, mouseover for release year.</p>
+    <header>
+        <h1>Random Movie Generator</h1>
+        <p>Click the button to get a random movie recommendation.</p>
+    </header>
+
+    <div class="controls">
+        <button id="randomMovie">Give me a random movie</button>
+        <button id="clear">Clear</button>
+    </div>
 
     <div class="wrapper"></div>
+
+    <p class="hint">Hover over the movie card to learn more.</p>
     
 </body>
 </html>
